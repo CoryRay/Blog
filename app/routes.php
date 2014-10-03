@@ -23,5 +23,10 @@ Route::get('/resume', function()
 
 Route::get('/portfolio', function()
 {
-	return 'This is my portfolio.';
+    return 'This is my portfolio.';
+});
+
+Route::get('/rolldice', function()
+{
+    return rand(1, 6);
 });
