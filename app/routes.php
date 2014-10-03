@@ -28,5 +28,6 @@ Route::get('/portfolio', function()
 
 Route::get('/rolldice', function()
 {
-    return rand(1, 6);
+    $randNum = rand(1, 6);
+    return View::make('roll-dice')->with('randNum', $randNum);
 });
