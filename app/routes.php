@@ -26,8 +26,8 @@ Route::get('/portfolio', function()
     return 'This is my portfolio.';
 });
 
-Route::get('/rolldice', function()
+Route::get('/rolldice/{guess}', function($guess)
 {
     $randNum = rand(1, 6);
-    return View::make('roll-dice')->with('randNum', $randNum);
+    return View::make('roll-dice')->with('randNum', $randNum)->with('guess', $guess);
 });
