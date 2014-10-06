@@ -10,7 +10,7 @@
             <h3>My Contact Info. </h3>
             <address>
                 <span class="glyphicon glyphicon-star"></span><a href="https://github.com/CoryRay"> Gitub</a> <br>
-                <span class="glyphicon glyphicon-link"></span><a href="http://lnkd.in/bTuUSWh"></abbr>LinkedIn</a><br>
+                <span class="glyphicon glyphicon-link"></span><a href="http://www.linkedin.com/in/rodriguezcory"></abbr>LinkedIn</a><br>
                 <abbr title="email"><span class="glyphicon glyphicon-envelope"></span><a href="mailto:coreyreylp@gmail.com"></abbr> coreyreylp@gmail.com</a><br>
                 <abbr title="Phone"><span class="glyphicon glyphicon-phone"></span></abbr> (210) 693-8141
             </address>
