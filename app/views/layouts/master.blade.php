@@ -3,12 +3,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Laravel Site</title>
+    <title>Laravel Blog Site</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <!-- inc other meta -->
 </head>
 <body>
     <!-- heading -->
@@ -23,19 +22,19 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Cory's Blog</a>
+                <a class="navbar-brand" href="/">Cory's Blog</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">About</a>
+                        <a href="/about">About</a>
                     </li>
                     <li>
-                        <a href="#">Resume</a>
+                        <a href="/resume">Resume</a>
                     </li>
                     <li>
-                        <a href="#">Portfolio</a>
+                        <a href="/portfolio">Portfolio</a>
                     </li>
                 </ul>
             </div>
