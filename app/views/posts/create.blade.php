@@ -1,16 +1,16 @@
-@extends('layouts.master')
+@extends('layouts.postsTemplate')
 
 @section('content')
-<div class='container'>
+<div class='col-md-8'>
     <h2>Create a New Post</h2>
-    <form action="{{{ action('PostsController@store') }}}" method='POST'>
+    <form method='POST' action="{{{ action('PostsController@store') }}}">
         <div class='form-group'>
             <label for="title" >Post Title:</label>
-            <input class='form-control' type="text" id='title' name='title' value="{{{ Input::old('title') }}}" required>
+            <input id='title' class='form-control' name='title' type="text" value="{{{ Input::old('title') }}}" required>
         </div>
         <div class='form-group'>
             <label for="body">Body:</label>
-            <textarea name="body" id="body" class='form-control' rows="5" required>{{{ Input::old('body') }}}</textarea>
+            <textarea id="body" class='form-control' name="body" rows="5" required>{{{ Input::old('body') }}}</textarea>
         </div>
         <div class='form-group'>
             <button class='btn btn-default'>Submit</button>
