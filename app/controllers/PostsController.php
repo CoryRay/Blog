@@ -35,10 +35,22 @@ class PostsController extends \BaseController {
         $post = new Post();
         $post->title = Input::get('title');
         $post->body = Input::get('body');
+        $id = $post->id;
 
-        $post->save();
+        // create the validator
+        $validator = Validator::make(Input::all(), Post::$rules);
 
-        return Redirect::action('PostsController@index');
+    // attempt validation
+        if ($validator->fails()) {
+            return Redirect::back()->withInput()->withErrors($validator);
+
+        // validation failed, redirect to the post create page with validation errors and old inputs
+        } else {
+
+            $post->save();
+
+            return Redirect::action('PostsController@index');
+        }
     }
 
 
