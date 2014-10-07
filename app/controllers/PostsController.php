@@ -50,7 +50,7 @@ class PostsController extends \BaseController {
      */
     public function show($id)
     {
-        return 'This shows an individual post.';
+        return View::make('posts.show');
     }
 
 
