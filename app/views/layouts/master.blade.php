@@ -28,6 +28,8 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     @if ($_SERVER['REQUEST_URI'] == '/about')
+
+                    <!-- route object laravel -->
                         <li class='active'>
                             <a href="/about">About</a>
                         </li>
