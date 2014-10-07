@@ -9,7 +9,8 @@ class PostsController extends \BaseController {
      */
     public function index()
     {
-        return 'This shows all the posts';
+        $posts = Post::all();
+        return View::make('posts.index')->with('posts', $posts);
     }
 
 
@@ -31,7 +32,13 @@ class PostsController extends \BaseController {
      */
     public function store()
     {
-        return Redirect::back()->withInput();
+        $post = new Post();
+        $post->title = Input::get('title');
+        $post->body = Input::get('body');
+
+        $post->sace();
+
+        return Redirect::action('PostsController@index');
     }
 
 
