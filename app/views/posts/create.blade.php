@@ -2,6 +2,7 @@
 
 @section('content')
 <div class='container'>
+    <h2>Create a New Post</h2>
     <form action="{{{ action('PostsController@store') }}}" method='POST'>
         <div class='form-group'>
             <label for="title" >Post Title:</label>
