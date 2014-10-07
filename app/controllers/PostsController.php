@@ -36,7 +36,7 @@ class PostsController extends \BaseController {
         $post->title = Input::get('title');
         $post->body = Input::get('body');
 
-        $post->sace();
+        $post->save();
 
         return Redirect::action('PostsController@index');
     }
