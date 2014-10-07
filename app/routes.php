@@ -20,3 +20,5 @@ Route::get('orm-test', function ()
     $posts = Post::all();
     return var_dump($posts);
 });
+
+Route::resource('posts', 'PostsController');
