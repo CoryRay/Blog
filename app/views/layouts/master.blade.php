@@ -27,15 +27,33 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li>
-                        <a href="/about">About</a>
-                    </li>
-                    <li>
+                    @if ($_SERVER['REQUEST_URI'] == '/about')
+                        <li class='active'>
+                            <a href="/about">About</a>
+                        </li>
+                    @else
+                        <li>
+                            <a href="/about">About</a>
+                        </li>
+                    @endif
+                    @if ($_SERVER['REQUEST_URI'] == '/resume')
+                        <li class='active'>
                         <a href="/resume">Resume</a>
-                    </li>
-                    <li>
+                        </li>
+                    @else
+                        <li>
+                            <a href="/resume">Resume</a>
+                        </li>
+                    @endif
+                    @if ($_SERVER['REQUEST_URI'] == '/portfolio')
+                        <li class='active'>
                         <a href="/portfolio">Portfolio</a>
-                    </li>
+                        </li>
+                    @else
+                        <li>
+                            <a href="/portfolio">Portfolio</a>
+                        </li>
+                    @endif
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
