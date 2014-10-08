@@ -62,7 +62,8 @@ class PostsController extends \BaseController {
      */
     public function show($id)
     {
-        return View::make('posts.show');
+        $post = Post::find($id);
+        return View::make('posts.show')->with('post', $post);
     }
 
 
@@ -74,7 +75,9 @@ class PostsController extends \BaseController {
      */
     public function edit($id)
     {
-        return 'This shows a form to edit a post';
+        $post = Post::findOrFail($id);
+
+        return View::make('posts.edit')->with('post', $post);
     }
 
 
