@@ -11,7 +11,7 @@
 <!-- Blog Post  -->
     @forelse($posts as $post)
     <h3 id='title'>{{{ $post->title }}}</h3>
-    <p id='date'>{{{ $post->updated_at->format(Post::DATE_FORMAT) }}}</p>
+    <p id='date'>{{{ $post->updated_at->setTimezone('America/Chicago')->format(Post::DATE_FORMAT) }}}</p>
     <img class='img-responsive' src="http://placehold.it/900x300" alt="">
     <p id='body'>{{{ $post->body }}}</p>
     <a class="btn btn-sm btn-primary" href="posts/{{ $post->id }}">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
