@@ -5,32 +5,34 @@
 <!-- Blog Post Content Column -->
 <div class="col-lg-8">
 
-<!-- Blog Post -->
-    <!-- Title -->
-    <h1>{{{ $post->title }}}</h1>
+    <!-- Blog Post -->
+    <article>
+        <!-- Title -->
+        <h1>{{{ $post->title }}}</h1>
 
-    <!-- Author -->
-    <p class="lead">by <a href="#">Cory Rodriguez</a></p>
-    <a class='btn btn-default' href={{ action('PostsController@edit', $post->id) }}>Edit</a>
+        <!-- Author -->
+        <p class="lead">by <a href="#">Cory Rodriguez</a></p>
+        <a class='btn btn-default' href={{ action('PostsController@edit', $post->id) }}>Edit</a>
+
+        <hr>
+
+        <!-- Date/Time -->
+        <p><span class="glyphicon glyphicon-time"></span> Posted on {{ $post->updated_at->setTimezone('America/Chicago')->format(Post::DATE_FORMAT) }}</p>
+
+        <hr>
+
+        <!-- Preview Image -->
+        <img class="img-responsive" src="http://placehold.it/900x300" alt="">
+
+        <hr>
+
+        <!-- Post Content -->
+        <p class="lead">{{{ $post->body }}}</p>
+    </article>
 
     <hr>
 
-    <!-- Date/Time -->
-    <p><span class="glyphicon glyphicon-time"></span> Posted on {{ $post->updated_at->setTimezone('America/Chicago')->format(Post::DATE_FORMAT) }}</p>
-
-    <hr>
-
-    <!-- Preview Image -->
-    <img class="img-responsive" src="http://placehold.it/900x300" alt="">
-
-    <hr>
-
-    <!-- Post Content -->
-    <p class="lead">{{{ $post->body }}}</p>
-    
-    <hr>
-
-<!-- Blog Comments -->
+    <!-- Blog Comments -->
     <!-- Comments Form -->
     <div class="well">
         <h4>Leave a Comment:</h4>
