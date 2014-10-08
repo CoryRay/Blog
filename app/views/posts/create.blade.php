@@ -6,6 +6,8 @@
     {{ Form::open(array('action' => 'PostsController@store')) }}
     <div class='form-group'>
         <label for="title" >Post Title:</label>
+        {{-- {{ Form::text('title', Input::old('title'), ) }} --}}
+        <!-- UPDATE TO USE BLADE -->
         <input id='title' class='form-control' name='title' type="text" value="{{{ Input::old('title') }}}" required>
         {{ $errors->first('title', '<br><div class="alert alert-info">:message</div>') }}
     </div>
