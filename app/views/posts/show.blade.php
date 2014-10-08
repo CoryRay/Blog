@@ -11,7 +11,7 @@
 
     <!-- Author -->
     <p class="lead">by <a href="#">Cory Rodriguez</a></p>
-    <a class='btn btn-primary' href={{ action('PostsController@edit', $post->id) }}>Edit</a>
+    <a class='btn btn-default' href={{ action('PostsController@edit', $post->id) }}>Edit</a>
 
     <hr>
 
