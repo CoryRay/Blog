@@ -40,7 +40,7 @@ class PostsController extends \BaseController {
         // create the validator
         $validator = Validator::make(Input::all(), Post::$rules);
 
-    // attempt validation
+        // attempt validation
         if ($validator->fails()) {
             return Redirect::back()->withInput()->withErrors($validator);
 
