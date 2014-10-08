@@ -16,7 +16,7 @@
     <hr>
 
     <!-- Date/Time -->
-    <p><span class="glyphicon glyphicon-time"></span> Posted on {{ date("F j, Y", strtotime($post->updated_at)) }}</p>
+    <p><span class="glyphicon glyphicon-time"></span> Posted on {{ $post->updated_at->format(Post::DATE_FORMAT) }}</p>
 
     <hr>
 
