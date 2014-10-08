@@ -23,7 +23,7 @@
 
     <!-- Pager -->
     <ul class="pager">
-        <li class="previous">
+        <li>
             {{ $posts->links() }}
         </li>
     </ul>
