@@ -21,7 +21,7 @@
 
     <hr>
 
-    <!-- Pager -->
+<!-- Paginator -->
     <ul class="pager">
         <li>
             {{ $posts->links() }}
