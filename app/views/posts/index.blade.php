@@ -5,14 +5,14 @@
 <div class="col-md-8">
 
     <h1>My Blog</h1>
+    <a class='btn btn-default' href={{ action('PostsController@create') }}>New Post</a>
     <hr>
 
-    <!-- Blog Post  -->
-
+<!-- Blog Post  -->
     @forelse($posts as $post)
     <h3 id='title'>{{{ $post->title }}}</h3>
     <p id='date'>{{{ date("F j, Y", strtotime($post->updated_at))}}}</p>
-    <div class='img-responsive' id='image'><img src="" alt="">IMAGE HERE</div>
+    <img class='img-responsive' src="http://placehold.it/900x300" alt="">
     <p id='body'>{{{ $post->body }}}</p>
     <a class="btn btn-sm btn-primary" href="posts/{{ $post->id }}">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
     @empty
