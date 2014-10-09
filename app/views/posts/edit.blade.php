@@ -6,17 +6,17 @@
 
     {{ Form::model($post, ['route' => ['posts.update', $post->id], 'method' => 'PUT']) }}
     <div class='form-group'>
-        <label for="title" >Post Title:</label>
-        <input id='title' class='form-control' name='title' type='text' value='{{{ $post->title }}}' required>
+        {{ Form::label('title', 'Title:') }}
+        {{ Form::text('title', $post->title, ['class' => 'form-control', 'id' => 'title'] ) }}
         {{ $errors->first('title', '<br><div class="alert alert-info">:message</div>') }}
     </div>
     <div class='form-group'>
-        <label for="body">Body:</label>
-        <textarea id="body" class='form-control' name="body" rows="5" required>{{{ $post->body }}}</textarea>
+        {{ Form::label('body', 'Body:') }}
+        {{ Form::textarea('body', $post->body, ['class' => 'form-control', 'id' => 'body', 'rows' => '5'] ) }}
         {{ $errors->first('body', '<br><div class="alert alert-info">:message</div>') }}
     </div>
     <div class='form-group'>
-        <button class='btn btn-default'>Update</button>
+        {{ Form::submit('Update', ['class' => 'btn btn-default'] ) }}
     </div>
     {{ Form::close() }}
 </div>
