@@ -12,7 +12,7 @@
         <a class='btn btn-default' href={{ action('PostsController@edit', $post->id) }}>Edit</a>
 
         <!-- TO DELETE A POST -->
-        {{ Form::open(['method' => 'DELETE', 'action' => ['PostsController@destroy', $post->id]]) }}
+        {{ Form::open(['method' => 'DELETE', 'action' => ['PostsController@destroy', $post->id], 'id' => 'delete-form']) }}
         <div class='form-group'>
             {{ Form::submit('Delete Post', ['class' => 'btn btn-danger']) }}
         </div>
@@ -78,5 +78,15 @@
             </div> <!-- End Nested Comment -->
         </div>
     </div>
-</div> <!-- end col-lg-8 -->
+</div> <!-- end col-md-8 -->
+@stop
+
+@section('bottom-script')
+<script>
+$('#delete-form').submit(function(event) {
+    if (!confirm('Are you sure you want to delete this?')) {
+        event.preventDefault();
+    };
+});
+</script>
 @stop

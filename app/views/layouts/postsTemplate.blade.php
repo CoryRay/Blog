@@ -70,7 +70,7 @@
             <div class="alert alert-danger">{{{ Session::get('errorMessage') }}}</div>
             @endif
 
-
+            <!-- PAGE MAIN CONTENT -->
             @yield('content')
 
             <!-- Blog Sidebar Widgets Column -->
@@ -130,5 +130,8 @@
         </footer>
 
     </div> <!-- END CONTAINER -->
+
+    @yield('bottom-script')
+
 </body>
 </html>
