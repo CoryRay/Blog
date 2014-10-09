@@ -1,23 +1,22 @@
 @extends('layouts.postsTemplate')
 
 @section('content')
-
-<!-- Blog Post Content Column -->
-<div class="col-lg-8">
+<div class="col-md-8"> <!-- Blog Post Column -->
 
     <article> <!-- Blog Post -->
         <h1>{{{ $post->title }}}</h1>
 
         <p class="lead">by <a href="#">Cory Rodriguez</a>, on {{ $post->updated_at->setTimezone('America/Chicago')->format(Post::DATE_FORMAT) }}</p>
 
+        <!-- TO EDIT A POST -->
         <a class='btn btn-default' href={{ action('PostsController@edit', $post->id) }}>Edit</a>
 
+        <!-- TO DELETE A POST -->
         {{ Form::open(['method' => 'DELETE', 'action' => ['PostsController@destroy', $post->id]]) }}
         <div class='form-group'>
-            {{ Form::submit('Delete Post', ['class' => 'btn btn-danger'] ) }}
+            {{ Form::submit('Delete Post', ['class' => 'btn btn-danger']) }}
         </div>
         {{ Form::close() }}
-
         <hr>
 
         <img class="img-responsive" src="http://placehold.it/900x300" alt="">

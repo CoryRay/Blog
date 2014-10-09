@@ -1,15 +1,13 @@
 @extends('layouts.postsTemplate')
 
 @section('content')
-<!-- Blog Entries Column -->
-<div class="col-md-8">
+<div class="col-md-8"> <!-- Blog Entries Column -->
 
     <h1>My Blog</h1>
     <a class='btn btn-default' href={{ action('PostsController@create') }}>New Post</a>
     <hr>
 
-    <!-- Blog Post  -->
-    <article>
+    <article> <!-- Blog Post  -->
         @forelse($posts as $post)
         <h3 id='title'>{{{ $post->title }}}</h3>
         <p id='date'>{{{ $post->updated_at->setTimezone('America/Chicago')->format(Post::DATE_FORMAT) }}}</p>
