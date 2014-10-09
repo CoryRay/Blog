@@ -9,8 +9,14 @@
         <h1>{{{ $post->title }}}</h1>
 
         <p class="lead">by <a href="#">Cory Rodriguez</a>, on {{ $post->updated_at->setTimezone('America/Chicago')->format(Post::DATE_FORMAT) }}</p>
-       
+
         <a class='btn btn-default' href={{ action('PostsController@edit', $post->id) }}>Edit</a>
+
+        {{ Form::open(['method' => 'DELETE', 'action' => ['PostsController@destroy', $post->id]]) }}
+        <div class='form-group'>
+            {{ Form::submit('Delete Post', ['class' => 'btn btn-danger'] ) }}
+        </div>
+        {{ Form::close() }}
 
         <hr>
 
