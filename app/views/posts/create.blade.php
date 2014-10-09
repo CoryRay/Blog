@@ -4,7 +4,7 @@
 <div class='col-md-8'>
     <h2>Create a New Post</h2>
     <hr>
-    {{ Form::open(array('action' => 'PostsController@store')) }}
+    {{ Form::open(['action' => 'PostsController@store', 'method' => 'POST']) }}
     <div class='form-group'>
         {{ Form::label('title', 'Title:') }}
         {{ Form::text('title', Input::old('title'), ['class' => 'form-control', 'id' => 'title'] ) }}
