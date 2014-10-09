@@ -46,6 +46,8 @@ class PostsController extends \BaseController {
             $post->body = Input::get('body');
             $post->save();
 
+            Session::flash('successMessage', 'Post created successfully.');
+
             return Redirect::action('PostsController@index');
         }
     }
