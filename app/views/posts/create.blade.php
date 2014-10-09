@@ -3,21 +3,20 @@
 @section('content')
 <div class='col-md-8'>
     <h2>Create a New Post</h2>
+    <hr>
     {{ Form::open(array('action' => 'PostsController@store')) }}
     <div class='form-group'>
-        <label for="title" >Post Title:</label>
-        {{-- {{ Form::text('title', Input::old('title'), ) }} --}}
-        <!-- UPDATE TO USE BLADE -->
-        <input id='title' class='form-control' name='title' type="text" value="{{{ Input::old('title') }}}" required>
+        {{ Form::label('title', 'Title:') }}
+        {{ Form::text('title', Input::old('title'), ['class' => 'form-control', 'id' => 'title'] ) }}
         {{ $errors->first('title', '<br><div class="alert alert-info">:message</div>') }}
     </div>
     <div class='form-group'>
-        <label for="body">Body:</label>
-        <textarea id="body" class='form-control' name="body" rows="5" required>{{{ Input::old('body') }}}</textarea>
+        {{ Form::label('body', 'Body:') }}
+        {{ Form::textarea('body', Input::old('body'), ['class' => 'form-control', 'id' => 'body', 'rows' => '5'] ) }}
         {{ $errors->first('body', '<br><div class="alert alert-info">:message</div>') }}
     </div>
     <div class='form-group'>
-        <button class='btn btn-default'>Submit</button>
+        {{ Form::button('Submit', ['class' => 'btn btn-default'] ) }}
     </div>
     {{ Form::close() }}
 </div>
