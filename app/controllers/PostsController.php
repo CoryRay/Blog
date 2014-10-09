@@ -32,15 +32,12 @@ class PostsController extends \BaseController {
      */
     public function store()
     {
-
         $validator = Validator::make(Input::all(), Post::$rules);
 
         if ($validator->fails()) {
             return Redirect::back()->withInput()->withErrors($validator);
 
-            // validation failed, redirect to the post create page with validation errors and old inputs
         } else {
-
             $post = new Post();
             $post->title = Input::get('title');
             $post->body = Input::get('body');
@@ -62,6 +59,11 @@ class PostsController extends \BaseController {
     public function show($id)
     {
         $post = Post::find($id);
+
+        if (!$post) {
+            App::abort(404);
+        }
+
         return View::make('posts.show')->with('post', $post);
     }
 
