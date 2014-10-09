@@ -16,7 +16,7 @@
         {{ $errors->first('body', '<br><div class="alert alert-info">:message</div>') }}
     </div>
     <div class='form-group'>
-        {{ Form::button('Submit', ['class' => 'btn btn-default'] ) }}
+        {{ Form::submit('Submit', ['class' => 'btn btn-default'] ) }}
     </div>
     {{ Form::close() }}
 </div>
