@@ -6,7 +6,7 @@
     <article> <!-- Blog Post -->
         <h1>{{{ $post->title }}}</h1>
 
-        <p class="lead">by <a href="#">Cory Rodriguez</a>, on {{ $post->updated_at->setTimezone('America/Chicago')->format(Post::DATE_FORMAT) }}</p>
+        <p class="lead">by <a href="#">Cory Rodriguez</a>, on {{ $post->updated_at->format(Post::DATE_FORMAT) }}</p>
 
         <!-- TO EDIT A POST -->
         <a class='btn btn-default' href={{ action('PostsController@edit', $post->id) }}>Edit</a>

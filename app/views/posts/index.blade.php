@@ -10,7 +10,7 @@
     <article> <!-- Blog Post  -->
         @forelse($posts as $post)
         <h3 id='title'>{{{ $post->title }}}</h3>
-        <p id='date'>{{{ $post->updated_at->setTimezone('America/Chicago')->format(Post::DATE_FORMAT) }}}</p>
+        <p id='date'><span class='glyphicon glyphicon-time'></span> {{{ $post->updated_at->format(Post::DATE_FORMAT) }}}</p>
         <img class='img-responsive' src="http://placehold.it/900x300" alt="">
         <p id='body'>{{{ $post->body }}}</p>
         <a class="btn btn-sm btn-primary" href="posts/{{ $post->id }}">More Info <span class="glyphicon glyphicon-chevron-right"></span></a>
@@ -21,7 +21,6 @@
 
     <hr>
 
-    <!-- Paginator -->
-    {{ $posts->links() }}
+    {{ $posts->links() }} <!-- Paginator -->
 </div>
 @stop
