@@ -95,7 +95,6 @@ class PostsController extends \BaseController {
         if ($validator->fails()) {
             return Redirect::back()->withInput()->withErrors($validator);
 
-            // validation failed, redirect to the post create page with validation errors and old inputs
         } else {
             $post = Post::find($id);
             $post->title = Input::get('title');
