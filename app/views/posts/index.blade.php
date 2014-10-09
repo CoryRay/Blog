@@ -24,10 +24,6 @@
     <hr>
 
     <!-- Paginator -->
-    <ul class="pager">
-        <li>
-            {{ $posts->links() }}
-        </li>
-    </ul>
+    {{ $posts->links() }}
 </div>
 @stop
