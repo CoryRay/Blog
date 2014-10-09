@@ -15,12 +15,12 @@
         <p id='date'>{{{ $post->updated_at->setTimezone('America/Chicago')->format(Post::DATE_FORMAT) }}}</p>
         <img class='img-responsive' src="http://placehold.it/900x300" alt="">
         <p id='body'>{{{ $post->body }}}</p>
-        <a class="btn btn-sm btn-primary" href="posts/{{ $post->id }}">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+        <a class="btn btn-sm btn-primary" href="posts/{{ $post->id }}">More Info <span class="glyphicon glyphicon-chevron-right"></span></a>
         @empty
         <p>No mo post</p>
         @endforelse
     </article>
-    
+
     <hr>
 
     <!-- Paginator -->
