@@ -2,7 +2,7 @@
 
 use Carbon\Carbon;
 
-class Post extends Eloquent
+class Post extends BaseModel
 {
     const DATE_FORMAT = 'F jS, Y';
 
