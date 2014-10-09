@@ -10,8 +10,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <!-- heading -->
-    <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -58,6 +56,7 @@
             </div>
         </div>
     </nav>
+    
     @yield('content')
 
     <div class='container'>
