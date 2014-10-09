@@ -20,7 +20,7 @@
         <p>No mo post</p>
         @endforelse
     </article>
-
+    
     <hr>
 
     <!-- Paginator -->

@@ -5,28 +5,18 @@
 <!-- Blog Post Content Column -->
 <div class="col-lg-8">
 
-    <!-- Blog Post -->
-    <article>
-        <!-- Title -->
+    <article> <!-- Blog Post -->
         <h1>{{{ $post->title }}}</h1>
 
-        <!-- Author -->
-        <p class="lead">by <a href="#">Cory Rodriguez</a></p>
+        <p class="lead">by <a href="#">Cory Rodriguez</a>, on {{ $post->updated_at->setTimezone('America/Chicago')->format(Post::DATE_FORMAT) }}</p>
+       
         <a class='btn btn-default' href={{ action('PostsController@edit', $post->id) }}>Edit</a>
 
         <hr>
 
-        <!-- Date/Time -->
-        <p><span class="glyphicon glyphicon-time"></span> Posted on {{ $post->updated_at->setTimezone('America/Chicago')->format(Post::DATE_FORMAT) }}</p>
-
-        <hr>
-
-        <!-- Preview Image -->
         <img class="img-responsive" src="http://placehold.it/900x300" alt="">
-
         <hr>
 
-        <!-- Post Content -->
         <p class="lead">{{{ $post->body }}}</p>
     </article>
 
@@ -43,11 +33,9 @@
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
-
     <hr>
 
     <!-- Posted Comments -->
-
     <!-- Comment -->
     <div class="media">
         <a class="pull-left" href="#">
@@ -82,9 +70,8 @@
                     </h4>
                     Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
                 </div>
-            </div>
-            <!-- End Nested Comment -->
+            </div> <!-- End Nested Comment -->
         </div>
     </div>
-</div>
+</div> <!-- end col-lg-8 -->
 @stop
