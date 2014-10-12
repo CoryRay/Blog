@@ -51,6 +51,7 @@ class PostsController extends \BaseController
             $post = new Post();
             $post->title = Input::get('title');
             $post->body = Input::get('body');
+            $post->img = Input::get('image');
             $post->save();
 
             Session::flash('successMessage', 'Post created successfully.');
