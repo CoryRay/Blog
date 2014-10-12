@@ -3,7 +3,7 @@
 @section('content')
 <div class='col-md-8'>
     <h2>Edit a Post</h2>
-
+    <hr>
     {{ Form::model($post, ['route' => ['posts.update', $post->id], 'method' => 'PUT']) }}
     <div class='form-group'>
         {{ Form::label('title', 'Title:') }}
