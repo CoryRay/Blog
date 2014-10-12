@@ -19,12 +19,11 @@
         {{ Form::close() }}
         <hr>
 
-        <img class="img-responsive" src="http://placehold.it/900x300" alt="">
+        <img class="img-responsive" src="{{ $post->img }}" alt="">
         <hr>
 
         <p class="lead">{{{ $post->body }}}</p>
     </article>
-
     <hr>
 
     <!-- Blog Comments -->

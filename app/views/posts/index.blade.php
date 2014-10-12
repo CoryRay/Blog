@@ -9,16 +9,21 @@
 
     <article> <!-- Blog Post  -->
         @forelse($posts as $post)
-        <h3 id='title'>{{{ $post->title }}}</h3>
-        <p id='date'><span class='glyphicon glyphicon-time'></span> {{{ $post->updated_at->format(Post::DATE_FORMAT) }}}</p>
-        <img class='img-responsive' src="http://placehold.it/900x300" alt="">
-        <p id='body'>{{{ $post->body }}}</p>
+        <h3>{{{ $post->title }}}</h3>
+
+        <p><span class='glyphicon glyphicon-time'></span> {{{ $post->updated_at->format(Post::DATE_FORMAT) }}}</p>
+        
+        <img class='img-responsive' src="{{ $post->img }}" alt="">
+        {{-- {{ HTML::image($post->img, 'alt text', ['class', 'img-responsive']) }} --}}
+        
+        <p>{{{ $post->body }}}</p>
+        
         <a class="btn btn-sm btn-primary" href="posts/{{ $post->id }}">More Info <span class="glyphicon glyphicon-chevron-right"></span></a>
+        
         @empty
         <p>No mo post</p>
         @endforelse
     </article>
-
     <hr>
 
     {{ $posts->links() }} <!-- Paginator -->
