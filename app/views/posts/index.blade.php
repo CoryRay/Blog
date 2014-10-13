@@ -11,7 +11,7 @@
         @forelse($posts as $post)
         <h3>{{{ $post->title }}}</h3>
 
-        <p><span class='glyphicon glyphicon-time'></span> {{{ $post->updated_at->format(Post::DATE_FORMAT) }}}</p>
+        <p><span class='glyphicon glyphicon-time'></span> {{{ $post->updated_at->format(Post::DATE_FORMAT) }}} by {{{ $post->user->email }}}</p>
         
         <img class='img-responsive' src="{{ $post->img }}" alt="">
         {{-- {{ HTML::image($post->img, 'alt text', ['class', 'img-responsive']) }} --}}
