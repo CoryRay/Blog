@@ -20,9 +20,12 @@
     <hr>
     <div class='row'>
         <div class='col-md-4'>
-            <h3>Education</h3>
-            <p><a href="http://www.brooksacademy.org">Brooks Academy of Science and Engineering</a></p>
-            <p>Codeup LAMP + J Course</p>
+            <h3>Honors/Awards</h3>
+            <ul>
+                <li>National Hispanic Scholar</li>
+                <li>Member of Society of Hispanic Professional Engineers</li>
+                <li>AAAA Regional Wrestling Qualifier</li>
+            </ul>
         </div>
         <div class='col-md-4'>
             <h3>Work Experience</h3>
@@ -34,12 +37,9 @@
             </dl>
         </div>
         <div class='col-md-4'>
-            <h3>Honors/Awards</h3>
-            <ul>
-                <li>National Hispanic Scholar</li>
-                <li>Member of <abbr title="Society of Hispanic Professional Engineers">SHPE</abbr></li>
-                <li>AAAA Regional Wrestling Qualifier</li>
-            </ul>
+            <h3>Education</h3>
+            <p><a href="http://www.brooksacademy.org">Brooks Academy of Science and Engineering</a></p>
+            <p>Codeup LAMP + J Course</p>
         </div>
     </div> <!-- end row -->
 </div> <!-- end container -->
