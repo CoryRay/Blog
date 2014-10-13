@@ -4,13 +4,13 @@ use Carbon\Carbon;
 
 class BaseModel extends Eloquent
 {
-    public function setCreatedAtAttribute($value)
+    public function getCreatedAtAttribute($value)
     {
         $utc = Carbon::createFromFormat($this->getDateFormat(), $value);
         return $utc->setTimezone('America/Chicago');
     }
 
-    public function setUpdatedAtAttribute($value)
+    public function getUpdatedAtAttribute($value)
     {
         $utc = Carbon::createFromFormat($this->getDateFormat(), $value);
         return $utc->setTimezone('America/Chicago');
