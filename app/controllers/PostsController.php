@@ -46,12 +46,12 @@ class PostsController extends \BaseController
 
         if ($validator->fails()) {
             return Redirect::back()->withInput()->withErrors($validator);
-
         } else {
             $post = new Post();
             $post->title = Input::get('title');
             $post->body = Input::get('body');
             $post->img = Input::get('image');
+            $post->user_id = Auth::id();
             $post->save();
 
             Session::flash('successMessage', 'Post created successfully.');

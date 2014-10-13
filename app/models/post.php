@@ -14,9 +14,8 @@ class Post extends BaseModel
 
     protected $table = 'posts';
 
-    public function getCreatedAtAttribute($value)
+    public function user()
     {
-        $utc = Carbon::createFromFormat($this->getDateFormat(), $value);
-        return $utc->setTimezone('America/Chicago');
+        return $this->belongsTo('User');
     }
 }

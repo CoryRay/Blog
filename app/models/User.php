@@ -7,7 +7,6 @@ use Illuminate\Auth\Reminders\RemindableInterface;
 
 class User extends BaseModel implements UserInterface, RemindableInterface
 {
-
     use UserTrait, RemindableTrait;
 
     /**
@@ -34,4 +33,8 @@ class User extends BaseModel implements UserInterface, RemindableInterface
         $this->attributes['email'] = strtolower($value);
     }
 
+    public function posts()
+    {
+        return $this->hasMany('Post');
+    }
 }
