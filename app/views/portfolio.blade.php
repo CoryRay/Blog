@@ -1,5 +1,7 @@
 @extends('layouts.master')
 
+@section('title')<title>Portfolio</title> @stop
+
 @section('content')
 <!-- Page Content -->
 <div class="container">

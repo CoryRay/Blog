@@ -1,5 +1,7 @@
 @extends('layouts.postsTemplate')
 
+@section('title')<title>Login to Blog</title> @stop
+
 @section('specific')
 <div class='col-md-8'>
     <h2>Log In</h2>

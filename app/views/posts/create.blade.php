@@ -1,5 +1,7 @@
 @extends('layouts.postsTemplate')
 
+@section('title')<title>Create a Post</title> @stop
+
 @section('specific')
 <div class='col-md-8'>
     <h2>Create a New Post</h2>
