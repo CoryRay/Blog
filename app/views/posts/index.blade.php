@@ -7,6 +7,9 @@
     <a class='btn btn-default' href={{ action('PostsController@create') }}>New Post</a>
     <hr>
 
+    @if (Input::has('search'))
+    <h2>Posts containing word "{{{ Input::get('search') }}}"</h2>
+    @endif
     <article> <!-- Blog Post  -->
         @forelse($posts as $post)
         <h3>{{{ $post->title }}}</h3>
@@ -27,5 +30,6 @@
     <hr>
 
     {{ $posts->links() }} <!-- Paginator -->
+    {{-- $posts->appends(array('search' => '$search')->links() --}}
 </div>
 @stop

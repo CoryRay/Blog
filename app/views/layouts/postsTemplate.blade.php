@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
+
 <div class='container'>
     <div class='row'>
 
@@ -21,14 +22,14 @@
             <!-- Blog Search Well -->
             <div class="well">
                 <h4>Blog Search</h4>
+                {{ Form::open(['action' => 'PostsController@index', 'method' => 'GET']) }}
                 <div class="input-group">
-                    <input type="text" class="form-control">
+                    {{ Form::text('search',  null, ['class' => 'form-control']) }}
                     <span class="input-group-btn">
-                        <button class="btn btn-default" type="button">
-                            <span class="glyphicon glyphicon-search"></span>
-                        </button>
+                        <button class="btn btn-default" type='submit'><span class="glyphicon glyphicon-search"></span></button>
                     </span>
-                </div> <!-- /.input-group -->
+                </div> <!-- END .input-group -->
+                {{ Form::close() }}
             </div>
 
             <!-- Blog Categories Well -->
@@ -39,19 +40,19 @@
                         <ul class="list-unstyled">
                             <li><a href="#">Vidya</a></li>
                             <li><a href="#">Television</a></li>
-                            <li><a href="#">Category Name</a></li>
+                            <li><a href="#">Education</a></li>
                             <li><a href="#">Category Name</a></li>
                         </ul>
-                    </div> <!-- /.col-lg-6 -->
+                    </div> <!-- end .col-lg-6 -->
                     <div class="col-lg-6">
                         <ul class="list-unstyled">
                             <li><a href="#">Programming</a></li>
                             <li><a href="#">Life Lessons</a></li>
                             <li><a href="#">Work</a></li>
-                            <li><a href="#">Education</a></li>
+                            <li><a href="#">Category Name</a></li>
                         </ul>
-                    </div> <!-- /.col-lg-6 -->
-                </div> <!-- /.row -->
+                    </div> <!-- end .col-lg-6 -->
+                </div> <!-- end .row -->
             </div>
 
             <!-- Side Widget Well -->
