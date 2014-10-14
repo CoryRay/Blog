@@ -47,12 +47,12 @@ class PostsController extends \BaseController
         if ($validator->fails()) {
             return Redirect::back()->withInput()->withErrors($validator);
         } else {
-            Input::file('image')->move('img');
+            //Input::file('image')->move('img');
 
             $post = new Post();
             $post->title = Input::get('title');
             $post->body = Input::get('body');
-            $post->img = Input::file('image')->getRealPath();
+            //$post->img = Input::file('image')->getRealPath();
             $post->user_id = Auth::id();
             $post->save();
 
