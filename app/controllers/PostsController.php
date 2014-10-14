@@ -8,7 +8,7 @@ class PostsController extends \BaseController
         parent::__construct();
 
         // run auth filter before all methods on this controller except index and show
-        $this->beforeFilter('auth.basic', array('except' => array('index', 'show')));
+        $this->beforeFilter('auth', ['except' => ['index', 'show']]);
     }
 
 
@@ -47,7 +47,6 @@ class PostsController extends \BaseController
         if ($validator->fails()) {
             return Redirect::back()->withInput()->withErrors($validator);
         } else {
-
             Input::file('image')->move('img');
 
             $post = new Post();

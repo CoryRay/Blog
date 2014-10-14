@@ -6,7 +6,6 @@ Route::get('/', function()
 });
 
 Route::get('/resume', 'HomeController@showResume');
-
 Route::get('/portfolio', 'HomeController@showPortfolio');
 
 Route::get('/rolldice/{guess}', function($guess)
@@ -22,3 +21,7 @@ Route::get('orm-test', function ()
 });
 
 Route::resource('posts', 'PostsController');
+
+Route::get('/login', 'HomeController@showLogin');
+Route::post('/login', 'HomeController@doLogin');
+Route::get('/logout', 'HomeController@doLogout');
