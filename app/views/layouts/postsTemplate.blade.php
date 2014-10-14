@@ -6,10 +6,10 @@
 
         <!-- this shows a message after submitting a post -->
         @if (Session::has('successMessage'))
-        <div class="alert alert-success">{{{ Session::get('successMessage') }}}</div>
+        <div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>{{{ Session::get('successMessage') }}}</div>
         @endif
         @if (Session::has('errorMessage'))
-        <div class="alert alert-danger">{{{ Session::get('errorMessage') }}}</div>
+        <div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>{{{ Session::get('errorMessage') }}}</div>
         @endif
 
         <!-- PAGE MAIN CONTENT -->
