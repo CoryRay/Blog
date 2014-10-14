@@ -42,12 +42,14 @@
                     @endif
                 </ul>
                 <ul class='nav navbar-nav navbar-right'>
+                    <li>
                     @if (Auth::check())
-                    <li><a href="#">{{-- Auth::user() --}} is logged in</a></li>
+                    <a href="#">{{ Auth::user()->email }} is logged in</a></li>
                     <li><a href="/logout">Log Out</a></li>
                     @else
-                    <li><a href="/login">Log In</a></li>
+                    <a href="/login">Log In</a>
                     @endif
+                    </li>
                 </ul>
             </div>
         </div>
