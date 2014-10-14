@@ -8,15 +8,15 @@
 
         <p class="lead">by {{{ $post->user->email }}}, on {{ $post->updated_at->format(Post::DATE_FORMAT) }}</p>
 
+        @if (Auth::check())
         <!-- TO EDIT A POST -->
-        <a class='btn btn-default' href={{ action('PostsController@edit', $post->id) }}>Edit</a>
 
         <!-- TO DELETE A POST -->
         {{ Form::open(['method' => 'DELETE', 'action' => ['PostsController@destroy', $post->id], 'id' => 'delete-form']) }}
-        <div class='form-group'>
-            {{ Form::submit('Delete Post', ['class' => 'btn btn-danger']) }}
-        </div>
+        <a class='btn btn-default' href={{ action('PostsController@edit', $post->id) }}>Edit</a>
+        {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
         {{ Form::close() }}
+        @endif
         <hr>
 
         <img class="img-responsive" src="{{ $post->img }}" alt="">
