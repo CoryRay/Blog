@@ -22,41 +22,37 @@
                 <a class="navbar-brand" href="/posts">Cory's Blog</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav navbar-left">
                     @if ($_SERVER['REQUEST_URI'] == '/about')
 
                     <!-- route object laravel -->
-                    <li class='active'>
-                        <a href="/about">About</a>
-                    </li>
+                    <li class='active'><a href="/about">About</a></li>
                     @else
-                    <li>
-                        <a href="/about">About</a>
-                    </li>
+                    <li><a href="/about">About</a></li>
                     @endif
                     @if ($_SERVER['REQUEST_URI'] == '/resume')
-                    <li class='active'>
-                        <a href="/resume">Resume</a>
-                    </li>
+                    <li class='active'><a href="/resume">Resume</a></li>
                     @else
-                    <li>
-                        <a href="/resume">Resume</a>
-                    </li>
+                    <li><a href="/resume">Resume</a></li>
                     @endif
                     @if ($_SERVER['REQUEST_URI'] == '/portfolio')
-                    <li class='active'>
-                        <a href="/portfolio">Portfolio</a>
-                    </li>
+                    <li class='active'><a href="/portfolio">Portfolio</a></li>
                     @else
-                    <li>
-                        <a href="/portfolio">Portfolio</a>
-                    </li>
+                    <li><a href="/portfolio">Portfolio</a></li>
+                    @endif
+                </ul>
+                <ul class='nav navbar-nav navbar-right'>
+                    @if (Auth::check())
+                    <li><a href="#">{{-- Auth::user() --}} is logged in</a></li>
+                    <li><a href="/logout">Log Out</a></li>
+                    @else
+                    <li><a href="/login">Log In</a></li>
                     @endif
                 </ul>
             </div>
         </div>
     </nav>
-    
+
     @yield('content')
 
     <div class='container'>
@@ -69,5 +65,8 @@
             </div>
         </footer>
     </div>
+
+    @yield('bottom-script')
+
 </body>
 </html>

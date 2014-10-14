@@ -1,6 +1,6 @@
 @extends('layouts.postsTemplate')
 
-@section('content')
+@section('specific')
 <div class="col-md-8"> <!-- Blog Entries Column -->
 
     <h1>My Blog</h1>

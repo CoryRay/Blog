@@ -1,6 +1,6 @@
 @extends('layouts.postsTemplate')
 
-@section('content')
+@section('specific')
 <div class='col-md-8'>
     <h2>Edit a Post</h2>
     <hr>
