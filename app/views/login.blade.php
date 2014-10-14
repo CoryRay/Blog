@@ -7,7 +7,7 @@
     {{ Form::open(['action' => 'HomeController@doLogin', 'method' => 'POST']) }}
     <div class='form-group'>
         {{ Form::label('email', 'Email Address:') }}
-        {{ Form::email('email', $value = null, ['id' => 'email', 'class' => 'form-control']) }}
+        {{ Form::email('email', Input::old('email'), ['id' => 'email', 'class' => 'form-control']) }}
     </div>
     <div class='form-group'>
         {{ Form::label('password', 'Password:') }}
