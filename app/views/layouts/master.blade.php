@@ -25,17 +25,8 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-left">
-                    @if (Route::currentRouteUses('HomeController@showResume'))
-                    <li class='active'><a href="/resume">Resume</a></li>
-                    @else
-                    <li><a href="/resume">Resume</a></li>
-                    @endif
-
-                    @if (Route::currentRouteUses('HomeController@showPortfolio'))
-                    <li class='active'><a href="/portfolio">Portfolio</a></li>
-                    @else
-                    <li><a href="/portfolio">Portfolio</a></li>
-                    @endif
+                    <li @if (Route::currentRouteUses('HomeController@showResume')) class='active' @endif><a href="/resume">Resume</a></li>
+                    <li @if (Route::currentRouteUses('HomeController@showPortfolio')) class='active' @endif><a href="/portfolio">Portfolio</a></li>
                 </ul>
                 <ul class='nav navbar-nav navbar-right'>
                     @if (Auth::check())
