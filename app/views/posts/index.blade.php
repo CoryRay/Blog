@@ -10,15 +10,17 @@
     @if (Input::has('search'))
     <h2>Posts containing word "{{{ Input::get('search') }}}"</h2>
     @endif
+
     <article> <!-- Blog Post  -->
         @forelse($posts as $post)
         <h3>{{{ $post->title }}}</h3>
 
         <p><span class='glyphicon glyphicon-time'></span> {{{ $post->updated_at->format(Post::DATE_FORMAT) }}} by {{{ $post->user->email }}}</p>
         
-        <img class='img-responsive' src="{{ $post->img }}" alt="">
-        {{-- {{ HTML::image($post->img, 'alt text', ['class', 'img-responsive']) }} --}}
-        
+        @if ($post->img)
+        {{ HTML::image($post->img, '', ['class' => 'img-responsive']) }}
+        @endif
+
         <p>{{{ $post->body }}}</p>
         
         <a class="btn btn-sm btn-primary" href="posts/{{ $post->id }}">More Info <span class="glyphicon glyphicon-chevron-right"></span></a>

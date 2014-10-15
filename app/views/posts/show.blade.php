@@ -6,7 +6,7 @@
     <article> <!-- Blog Post -->
         <h1>{{{ $post->title }}}</h1>
 
-        <p class="lead">by {{{ $post->user->email }}}, on {{ $post->updated_at->format(Post::DATE_FORMAT) }}</p>
+        <p>by {{{ $post->user->email }}}, on {{ $post->updated_at->format(Post::DATE_FORMAT) }}</p>
 
         @if (Auth::check()) <!-- Buttons to edit and delete posts -->
         {{ Form::open(['method' => 'DELETE', 'action' => ['PostsController@destroy', $post->id], 'id' => 'delete-form']) }}
@@ -16,8 +16,10 @@
         @endif
         <hr>
 
-        <img class="img-responsive" src="{{ $post->img }}" alt="">
+        @if ($post->img)
+        {{ HTML::image($post->img, '', ['class' => 'img-responsive']) }}
         <hr>
+        @endif
 
         <p class="lead">{{{ $post->body }}}</p>
     </article>
