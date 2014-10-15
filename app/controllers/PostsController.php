@@ -62,13 +62,21 @@ class PostsController extends \BaseController
         if ($validator->fails()) {
             return Redirect::back()->withInput()->withErrors($validator);
         } else {
-            //Input::file('image')->move('img');
-
             $post = new Post();
             $post->title = Input::get('title');
             $post->body = Input::get('body');
-            //$post->img = Input::file('image')->getRealPath();
             $post->user_id = Auth::id();
+
+            if (Input::hasFile('image')) {
+                $image = Input::file('image');
+                $destination_path = public_path() . '/img/';
+                $original_filename = str_random(5) . '_' . $image->getClientOriginalName();
+
+                $image->move($destination_path, $original_filename);
+                
+                $post->img = '/img/' . $original_filename;
+            }
+
             $post->save();
 
             Session::flash('successMessage', 'Post created successfully.');
