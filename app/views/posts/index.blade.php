@@ -26,7 +26,7 @@
         <a class="btn btn-sm btn-primary" href="posts/{{ $post->id }}">More Info <span class="glyphicon glyphicon-chevron-right"></span></a>
         
         @empty
-        <p>No mo' post</p>
+        <p>No mo&rsquo; post</p>
         @endforelse
     </article>
     <hr>
