@@ -23,7 +23,7 @@
 
         <p>{{{ $post->body }}}</p>
         
-        <a class="btn btn-sm btn-primary" href="posts/{{ $post->id }}">More Info <span class="glyphicon glyphicon-chevron-right"></span></a>
+        <a class="btn btn-sm btn-primary" href="{{ action('PostsController@show', $post->id) }}">More Info <span class="glyphicon glyphicon-chevron-right"></span></a>
         
         @empty
         <p>No mo&rsquo; post</p>
