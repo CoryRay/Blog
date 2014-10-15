@@ -8,10 +8,7 @@
 
         <p class="lead">by {{{ $post->user->email }}}, on {{ $post->updated_at->format(Post::DATE_FORMAT) }}</p>
 
-        @if (Auth::check())
-        <!-- TO EDIT A POST -->
-
-        <!-- TO DELETE A POST -->
+        @if (Auth::check()) <!-- Buttons to edit and delete posts -->
         {{ Form::open(['method' => 'DELETE', 'action' => ['PostsController@destroy', $post->id], 'id' => 'delete-form']) }}
         <a class='btn btn-default' href={{ action('PostsController@edit', $post->id) }}>Edit</a>
         {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
