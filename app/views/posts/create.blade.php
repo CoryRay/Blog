@@ -23,6 +23,7 @@
         <p class="help-block">This is optional.</p>
     </div>
     <div class='form-group'>
+        {{ Form::reset('Reset', ['class' => 'btn btn-default']) }}
         {{ Form::submit('Submit', ['class' => 'btn btn-primary']) }}
     </div>
     {{ Form::close() }}
