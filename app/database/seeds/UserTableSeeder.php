@@ -4,12 +4,9 @@ class UserTableSeeder extends Seeder
 {
     public function run()
     {
-        
-
         $user = new User();
-        $user->email    = 'admin@codeup.com';
-        $user->password = 'adminPass123!';
+        $user->email    = $_ENV['USER_EMAIL'];
+        $user->password = $_ENV['USER_PASSWORD'];
         $user->save();
     }
-
 }
