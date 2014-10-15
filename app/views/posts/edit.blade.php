@@ -18,7 +18,8 @@
         {{ $errors->first('body', '<br><div class="alert alert-info">:message</div>') }}
     </div>
     <div class='form-group'>
-        {{ Form::submit('Update', ['class' => 'btn btn-default']) }}
+        <a class='btn btn-default' href={{ action('PostsController@show', $post->id) }}>Cancel</a>
+        {{ Form::submit('Update', ['class' => 'btn btn-primary']) }}
     </div>
     {{ Form::close() }}
 </div>
