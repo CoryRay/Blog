@@ -48,7 +48,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Cory &copy; My Website 2014</p>
+                    <p>Cory Rodriguez &#124; 2014</p>
                 </div>
             </div>
         </footer>

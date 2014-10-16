@@ -71,7 +71,7 @@ class PostsController extends \BaseController
                 $image = Input::file('image');
                 $destination_path = public_path() . '/img/';
                 $original_filename = str_random(5) . '_' . $image->getClientOriginalName();
-
+//move all the above line to line 77
                 $image->move($destination_path, $original_filename);
                 
                 $post->img = '/img/' . $original_filename;
