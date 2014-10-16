@@ -38,4 +38,19 @@ class HomeController extends BaseController
         Auth::logout();
         return Redirect::action('PostsController@index');
     }
+
+    public function showUser()
+    {
+        //make sure a user is logged in before showing this view
+        //if (Auth::user()) {
+            return View::make('user');
+        //} else {
+        //    return showLogin();
+        // }
+    }
+
+    public function editUser()
+    {
+
+    }
 }
