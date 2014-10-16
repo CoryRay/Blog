@@ -9,12 +9,12 @@
     {{ Form::open(['action' => 'PostsController@store', 'method' => 'POST', 'files' => true]) }}
     <div class='form-group'>
         {{ Form::label('title', 'Title:') }}
-        {{ Form::text('title', Input::old('title'), ['class' => 'form-control', 'id' => 'title']) }}
+        {{ Form::text('title', Input::old('title'), ['class' => 'form-control', 'id' => 'title', 'required' => '']) }}
         {{ $errors->first('title', '<br><div class="alert alert-info">:message</div>') }}
     </div>
     <div class='form-group'>
         {{ Form::label('body', 'Body:') }}
-        {{ Form::textarea('body', Input::old('body'), ['class' => 'form-control', 'id' => 'body', 'rows' => '5']) }}
+        {{ Form::textarea('body', Input::old('body'), ['class' => 'form-control', 'id' => 'body', 'rows' => '5', 'required' => '']) }}
         {{ $errors->first('body', '<br><div class="alert alert-info">:message</div>') }}
     </div>
     <div class='form-group'>
