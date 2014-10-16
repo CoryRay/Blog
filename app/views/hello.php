@@ -8,7 +8,7 @@
 	@import url(//fonts.googleapis.com/css?family=Lato:700);
 	
 	html { 
-		background: url(img/landing-small.jpg) no-repeat center center fixed; 
+		background: url(landing-small.jpg) no-repeat center center fixed; 
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
