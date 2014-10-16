@@ -51,6 +51,8 @@ class HomeController extends BaseController
 
     public function editUser()
     {
-
+//built in laravel password reset for password change
+//make a userController
+//way generators - scaffolding for user
     }
 }
