@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     @yield('title')
-    <title>Laravel Blog Site</title>
+    <title>Cory's Laravel Blog Site</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="/css/blog.css">
@@ -31,7 +31,7 @@
                 </ul>
                 <ul class='nav navbar-nav navbar-right'>
                     @if (Auth::check())
-                    <li><a href="#">{{ Auth::user()->email }} is logged in</a></li>
+                    <li><a href="/user">{{ Auth::user()->email }} is logged in</a></li>
                     <li><a href="/logout">Log Out</a></li>
                     @else
                     <li><a href="/login">Log In</a></li>
