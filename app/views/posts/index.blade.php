@@ -21,7 +21,7 @@
         {{ HTML::image($post->img, '', ['class' => 'img-responsive']) }}
         @endif
 
-        <p>{{{ $post->body }}}</p>
+        <p>{{{ substr($post->body, 0, 255) . '...' }}}</p>
         
         <a class="btn btn-sm btn-primary" href="{{ action('PostsController@show', $post->id) }}">More Info <span class="glyphicon glyphicon-chevron-right"></span></a>
         
