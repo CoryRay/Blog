@@ -1,7 +1,6 @@
 @extends('layouts.master')
 
 @section('content')
-
 <div class='container'>
     <div class='row'>
 
@@ -57,9 +56,7 @@
 
             <!-- Side Widget Well -->
             <div class="well">
-                <h4>Dumb Fortune Here</h4>
-                <?php // $output = shell_exec('/usr/games/fortune'); echo "$output";?>
-                <p>No mo&rsquo; fortune.</p>
+                <p>This is a sidebar well.</p>
             </div>
         </div>
     </div> <!-- END ROW - CONTAINS THE INNER CONTENT -->
