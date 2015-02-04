@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title')<title>Resume</title> @stop
+@section('title', 'Resume')
 
 @section('content')
 <div class="container">
@@ -41,7 +41,7 @@
         <div class='col-md-4'>
             <h3>Education</h3>
             <p><a href="http://www.brooksacademy.org">Brooks Academy of Science and Engineering</a></p>
-            <p>Codeup LAMP + J Course</p>
+            <p>Codeup LAMP + J Course - Fall 2014</p>
         </div>
     </div> <!-- end row -->
 </div> <!-- end container -->
